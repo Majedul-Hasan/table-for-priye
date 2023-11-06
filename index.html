@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice Data Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Invoice Date Before</th>
+                <th>Name</th>
+                <th>Action</th>
+                <th>BDT</th>
+                <th>EUR</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the data to create table rows -->
+            <!-- Ensure 'allInvoiceData' is replaced with your actual data variable name -->
+            <!-- This assumes 'allInvoiceData' is defined and contains the array of objects -->
+
+            <!-- Start of JavaScript loop to populate table -->
+            <script>
+                const allInvoiceData = [
+    {
+        "Date": "2023-10-09",
+        "InvoiceDateBefore": "2023-10-04",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2831.73,
+        "EUR": 26.73
+    },
+    {
+        "Date": "2023-10-09",
+        "InvoiceDateBefore": "2023-10-01",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 6693.58,
+        "EUR": 60.85
+    },
+    {
+        "Date": "2023-09-03",
+        "InvoiceDateBefore": "2023-08-27",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 27784.99,
+        "EUR": 245.04
+    },
+    {
+        "Date": "2023-08-13",
+        "InvoiceDateBefore": "2023-08-06",
+        "Name": "Preanka Kabir",
+        "Action": "Cancelled",
+        "BDT": 4448.32,
+        "EUR": 40.00
+    },
+    {
+        "Date": "2023-08-06",
+        "InvoiceDateBefore": "2023-07-30",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 12614.46,
+        "EUR": 110.14
+    },
+    {
+        "Date": "2023-07-05",
+        "InvoiceDateBefore": "2023-06-29",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 6213.71,
+        "EUR": 55.98
+    },
+    {
+        "Date": "2023-06-04",
+        "InvoiceDateBefore": "2023-05-27",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 23317.20,
+        "EUR": 210.94
+    },
+    {
+        "Date": "2023-05-02",
+        "InvoiceDateBefore": "2023-04-26",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 1613.80,
+        "EUR": 15.95
+    },
+    {
+        "Date": "2023-04-04",
+        "InvoiceDateBefore": "2023-03-28",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 21526.76,
+        "EUR": 195.25
+    },
+    {
+        "Date": "2023-03-06",
+        "InvoiceDateBefore": "2023-02-26",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 3485.89,
+        "EUR": 33.22
+    },
+    {
+        "Date": "2023-02-02",
+        "InvoiceDateBefore": "2023-01-26",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 4115.06,
+        "EUR": 38.08
+    },
+    {
+        "Date": "2023-01-02",
+        "InvoiceDateBefore": "2022-12-25",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 4638.68,
+        "EUR": 44.13
+    },
+    {
+        "Date": "2022-12-05",
+        "InvoiceDateBefore": "2022-11-28",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 13336.91,
+        "EUR": 129.05
+    },
+    {
+        "Date": "2022-11-02",
+        "InvoiceDateBefore": "2022-10-26",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 15082.34,
+        "EUR": 156.13
+    },
+    {
+        "Date": "2022-11-01",
+        "InvoiceDateBefore": "2022-10-23",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 130.16,
+        "EUR": 3.00
+    },
+    {
+        "Date": "2022-09-07",
+        "InvoiceDateBefore": "2022-08-31",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 363.02,
+        "EUR": 5.62
+    },
+    {
+        "Date": "2022-08-10",
+        "InvoiceDateBefore": "2022-08-02",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 4638.68,
+        "EUR": 51.21
+    },
+    {
+        "Date": "2022-07-04",
+        "InvoiceDateBefore": "2022-06-26",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 20635.42,
+        "EUR": 219.94
+    },
+    {
+        "Date": "2022-06-05",
+        "InvoiceDateBefore": "2022-05-28",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 11114.55,
+        "EUR": 121.34
+    },
+    {
+        "Date": "2022-05-22",
+        "InvoiceDateBefore": "2022-05-14",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 582.00,
+        "EUR": 8.13
+    },
+    {
+        "Date": "2022-04-28",
+        "InvoiceDateBefore": "2022-04-20",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 1595.39,
+        "EUR": 19.67
+    },
+    {
+        "Date": "2022-02-22",
+        "InvoiceDateBefore": "2022-02-15",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2022.78,
+        "EUR": 23.12
+    },
+    {
+        "Date": "2022-01-16",
+        "InvoiceDateBefore": "2022-01-09",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 14676.08,
+        "EUR": 154.92
+    },
+    {
+        "Date": "2021-12-19",
+        "InvoiceDateBefore": "2021-12-11",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2056.25,
+        "EUR": 23.54
+    },
+    {
+        "Date": "2021-11-17",
+        "InvoiceDateBefore": "2021-11-10",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 9611.84,
+        "EUR": 102.64
+    },
+    {
+        "Date": "2021-07-11",
+        "InvoiceDateBefore": "2021-07-03",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 856.80,
+        "EUR": 10.56
+    },
+    {
+        "Date": "2021-06-07",
+        "InvoiceDateBefore": "2021-05-30",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 3844.55,
+        "EUR": 40.13
+    },
+    {
+        "Date": "2021-05-11",
+        "InvoiceDateBefore": "2021-05-03",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 655.00,
+        "EUR": 8.33
+    },
+    {
+        "Date": "2021-05-09",
+        "InvoiceDateBefore": "2021-05-01",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 746.30,
+        "EUR": 9.24
+    },
+    {
+        "Date": "2021-04-11",
+        "InvoiceDateBefore": "2021-04-04",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 746.30,
+        "EUR": 9.72
+    },
+    {
+        "Date": "2021-02-14",
+        "InvoiceDateBefore": "2021-02-06",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 4048.55,
+        "EUR": 42.48
+    },
+    {
+        "Date": "2021-01-11",
+        "InvoiceDateBefore": "2021-01-04",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 748.85,
+        "EUR": 9.53
+    },
+    {
+        "Date": "2020-12-17",
+        "InvoiceDateBefore": "2020-12-10",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2670.70,
+        "EUR": 28.70
+    },
+    {
+        "Date": "2020-11-11",
+        "InvoiceDateBefore": "2020-11-05",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 299.20,
+        "EUR": 5.15
+    },
+    {
+        "Date": "2020-07-08",
+        "InvoiceDateBefore": "2020-06-30",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 1480.70,
+        "EUR": 18.08
+    },
+    {
+        "Date": "2020-06-08",
+        "InvoiceDateBefore": "2020-06-01",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2170.90,
+        "EUR": 25.40
+    },
+    {
+        "Date": "2020-05-05",
+        "InvoiceDateBefore": "2020-04-28",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 7382.25,
+        "EUR": 83.98
+    },
+    {
+        "Date": "2020-04-05",
+        "InvoiceDateBefore": "2020-03-29",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2265.25,
+        "EUR": 27.55
+    },
+    {
+        "Date": "2020-03-08",
+        "InvoiceDateBefore": "2020-03-01",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 2356.95,
+        "EUR": 27.71
+    },
+    {
+        "Date": "2020-02-23",
+        "InvoiceDateBefore": "2020-02-17",
+        "Name": "Preanka Kabir",
+        "Action": "Sent",
+        "BDT": 1.00,
+        "EUR": 2.18
+    }
+    // Add more objects for additional rows if necessary
+];
+
+                // Loop through the array to create table rows
+                for (let i = 0; i < allInvoiceData.length; i++) {
+                    document.write("<tr>");
+                    document.write("<td>" + allInvoiceData[i].Date + "</td>");
+                    document.write("<td>" + allInvoiceData[i].InvoiceDateBefore + "</td>");
+                    document.write("<td>" + allInvoiceData[i].Name + "</td>");
+                    document.write("<td>" + allInvoiceData[i].Action + "</td>");
+                    document.write("<td>" + allInvoiceData[i].BDT + "</td>");
+                    document.write("<td>" + allInvoiceData[i].EUR + "</td>");
+                    document.write("</tr>");
+                }
+            </script>
+            <!-- End of JavaScript loop -->
+        </tbody>
+    </table>
+</body>
+</html>
